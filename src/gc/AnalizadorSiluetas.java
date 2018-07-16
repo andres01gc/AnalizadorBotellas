@@ -22,12 +22,14 @@ public class AnalizadorSiluetas {
             //compruebo si el nombre es jpg
 
             if (f.getName().toUpperCase().contains(".JPG")) {
-                siluetas.add(new Silueta(f.getAbsolutePath()));
-                System.out.println("SE finaliza con la primera silueta");
+                new Silueta(f.getAbsolutePath());
+                System.out.println("fin tras la primera imagen");
                 break;
             }
-
         }
+
+        Main.app.exit();
         System.out.println("Se Cargan todas la siluetas");
+
     }
 }
